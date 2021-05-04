@@ -1,0 +1,28 @@
+sqlite3 chinook.db
+sqlite> .tables
+albums          employees       invoices        playlists     
+artists         genres          media_types     tracks        
+customers       invoice_items   playlist_track
+sqlite> .mode column
+sqlite> .headers on
+
+Récupérer tous les albums:
+sqlite> SELECT * FROM albums;
+
+Récupérer tous les albums dont le titre contient "Great":
+sqlite> SELECT * FROM albums WHERE Title LIKE '%Great%';
+
+Donner le nombre total d'albums contenus dans la base :
+sqlite> SELECT COUNT(*) FROM albums;
+
+Supprimer tous les albums dont le nom contient "music"
+sqlite> DELETE FROM albums WHERE title LIKE '%music%';
+
+Récupérer tous les albums écrits par AC/DC
+sqlite> SELECT * FROM artists WHERE name = 'AC/DC';
+
+Récupérer tous les titres des albums de AC/DC
+Récupérer la liste des titres de l'album "Let There Be Rock"
+Afficher le prix de cet album ainsi que sa durée totale
+Afficher le coût de l'intégralité de la discographie de "Deep Purple"
+Créer l'album de ton artiste favori en base, en renseignant correctement les trois tables albums, artists et tracks

@@ -1,0 +1,36 @@
+CREATE TABLE `user` (
+`id` INTEGER PRIMARY KEY AUTOINCREMENT, 
+`username` TEXT
+);
+
+INSERT INTO user (username) VALUES ('Célia');
+INSERT INTO user (username) VALUES ('Eva');
+
+CREATE TABLE 'article' (
+    'id' INTEGER PRIMARY KEY AUTOINCREMENT,
+    'id_user' INTEGER,
+    'title' TEXT,
+    'content' TEXT
+) ;
+
+INSERT INTO article (id_user, title, content) VALUES (1, 'Blog', 'Why I don't have a blog');
+INSERT INTO article (id_user, title, content) VALUES (2, 'Japan', 'My life in Japan');
+INSERT INTO article (id_user, title, content) VALUES (2, 'After Japan', 'My life after Japan');
+
+CREATE TABLE 'category' (
+    'id' INTEGER PRIMARY KEY AUTOINCREMENT, 
+    'title' TEXT
+);   
+
+INSERT into category (title) VALUES ('Expat Life');
+INSERT into category (title) VALUES ('Japan');
+
+CREATE TABLE `tag` (
+  `id` INTEGER PRIMARY KEY AUTOINCREMENT,
+  `title` TEXT,
+  `color` TEXT
+);
+
+INSERT INTO tag (title, color) VALUES ('korekara', 'Vert');
+INSERT INTO tag (title, color) VALUES ('tsukareta', 'Orange');
+

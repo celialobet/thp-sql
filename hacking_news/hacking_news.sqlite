@@ -1,0 +1,24 @@
+CREATE TABLE `user` (
+`id` INTEGER PRIMARY KEY AUTOINCREMENT, 
+`username` TEXT
+);
+
+CREATE TABLE `link` (
+`id` INTEGER PRIMARY KEY AUTOINCREMENT, 
+`user_id` INTEGER,
+`link_content` TEXT
+);
+
+CREATE TABLE `link_comment` (
+`id` INTEGER PRIMARY KEY AUTOINCREMENT, 
+`user_id` INTEGER,
+`link_id` INTEGER,
+`comment` TEXT
+);
+
+CREATE TABLE `comment_to_comment` (
+`id` INTEGER PRIMARY KEY AUTOINCREMENT, 
+`user_id` INTEGER,
+`comment_id` INTEGER,
+`comment` TEXT
+);
